@@ -1,4 +1,3 @@
-
     <!-- Footer -->
     <footer class="youplay-footer-parallax">
       <div class="wrapper" style="background-image: url({{ asset('assets/assets/images/footer-bg.jpg') }})">
@@ -87,7 +86,7 @@
   <script type="text/javascript" src="{{ asset('assets/bower_components/jquery.countdown/dist/jquery.countdown.min.js') }}"></script>
 
   <!-- Magnific Popup -->
-  <script type="text/javascript" src="{{ asset('assets/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js') }}></script>
+  <script type="text/javascript" src="{{ asset('assets/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js') }}"></script>
   <!-- Youplay -->
   <script type="text/javascript" src="{{ asset('assets/youplay/js/youplay.min.js') }}"></script>
 
@@ -146,5 +145,3 @@
 
 <!-- Mirrored from html.nkdev.info/youplay/anime/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 May 2016 12:42:48 GMT -->
 </html>
-
-@include('layouts.footer')

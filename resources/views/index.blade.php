@@ -5,7 +5,7 @@
 
     <!-- Banner -->
     <section class="youplay-banner banner-top big youplay-banner-parallax">
-      <div class="image" style="background-image: url('assets/images/banner-bg.jpg')">
+      <div class="image" style="background-image: url({{ asset('assets/images/banner-bg.jpg') }})">
       </div>
 
       <div class="info">
@@ -56,33 +56,33 @@
       <!-- Screenshots -->
       <h2 class="container h1" id="screenshots">Screenshots</h2>
       <div class="youplay-carousel gallery-popup">
-        <a class="angled-img" href="assets/images/game-brs-1-1920x1179.jpg">
+        <a class="angled-img" href="{{ asset('assets/images/game-brs-1-1920x1179.jpg') }}">
           <div class="img">
             <img src="assets/images/game-brs-1-500x375.jpg" alt="">
           </div>
           <i class="fa fa-search-plus icon"></i>
         </a>
-        <a class="angled-img" href="assets/images/game-brs-2-1920x1006.jpg">
+        <a class="angled-img" href="{{ asset('assets/images/game-brs-2-1920x1006.jpg') }}">
           <div class="img">
             <img src="assets/images/game-brs-2-500x375.jpg" alt="">
           </div>
           <i class="fa fa-search-plus icon"></i>
         </a>
-        <a class="angled-img" href="assets/images/game-brs-3-1920x1080.jpg">
+        <a class="angled-img" href="{{ asset('assets/images/game-brs-3-1920x1080.jpg') }}">
           <div class="img">
             <img src="assets/images/game-brs-3-500x375.jpg" alt="">
           </div>
           <i class="fa fa-search-plus icon"></i>
         </a>
-        <a class="angled-img" href="assets/images/game-brs-4-1920x1200.jpg">
+        <a class="angled-img" href="{{ asset('assets/images/game-brs-4-1920x1200.jpg') }}">
           <div class="img">
             <img src="assets/images/game-brs-4-500x375.jpg" alt="">
           </div>
           <i class="fa fa-search-plus icon"></i>
         </a>
-        <a class="angled-img" href="assets/images/game-brs-5-1525x900.jpg">
+        <a class="angled-img" href="{{ asset('assets/images/game-brs-5-1525x900.jpg') }}">
           <div class="img">
-            <img src="assets/images/game-brs-5-500x375.jpg" alt="">
+            <img src="{{ asset('assets/images/game-brs-5-500x375.jpg') }}" alt="" >
           </div>
           <i class="fa fa-search-plus icon"></i>
         </a>
@@ -110,7 +110,7 @@
 
       <!-- Testimonials -->
       <section class="youplay-banner youplay-banner-parallax mt-60" id="testimonials">
-        <div class="image" style="background-image: url('assets/images/game-brs-2-1920x1006.jpg');" data-speed="-0.2">
+        <div class="image" style="background-image: url({{ asset('assets/images/game-brs-2-1920x1006.jpg') }});" data-speed="-0.2">
         </div>
 
         <div class="info">
@@ -126,7 +126,7 @@
                       Purus purus penatibus tempus est risus elit convallis ultrices adipiscing et mollis fames vivamus.
                     </p>
                     <small class="author-name">Adrian Ray</small>
-                    <img class="img-circle" alt="Adrian Ray" src="assets/images/avatar-user-2.png" />
+                    <img class="img-circle" alt="Adrian Ray" src="{{ asset('assets/images/avatar-user-2.png') }}" />
                   </blockquote>
                 </div>
                 <div class="col-md-4">
@@ -135,7 +135,7 @@
                       Lacus Ut varius viverra vestibulum eleifend consectetuer proin accumsan pretium dis ultrices, hendrerit platea. Suspendisse Nunc. Ligula phasellus iaculis torquent.
                     </p>
                     <small class="author-name">Salvador Moore</small>
-                    <img class="img-circle" alt="Salvador Moore" src="assets/images/avatar-user-3.png" />
+                    <img class="img-circle" alt="Salvador Moore" src="{{ asset('assets/images/avatar-user-3.png') }}" />
                   </blockquote>
                 </div>
                 <div class="col-md-4">
@@ -144,7 +144,7 @@
                       Curae, sodales facilisi, lacus fringilla ridiculus cras, sed, class class. Class per faucibus eget Aliquam quam interdum vehicula Pretium dolor. Nunc nascetur urna phasellus.
                     </p>
                     <small class="author-name">Clayton Fields</small>
-                    <img class="img-circle" alt="Clayton Fields" src="assets/images/avatar-user-4.png" />
+                    <img class="img-circle" alt="Clayton Fields" src="{{ asset('assets/images/avatar-user-4.png') }}" />
                   </blockquote>
                 </div>
               </div>
@@ -164,7 +164,7 @@
             <div class="col-md-4">
               <a href="blog-post.html" class="angled-img">
                 <div class="img">
-                  <img src="assets/images/game-brs-6-500x375.jpg" alt="">
+                  <img src="{{ asset('assets/images/game-brs-6-500x375.jpg') }}" alt="">
                 </div>
               </a>
             </div>
@@ -193,7 +193,7 @@
             <div class="col-md-4">
               <a href="blog-post.html" class="angled-img">
                 <div class="img">
-                  <img src="assets/images/game-brs-7-500x375.jpg" alt="">
+                  <img src="{{ asset('assets/images/game-brs-7-500x375.jpg') }}" alt="">
                 </div>
               </a>
             </div>
@@ -221,7 +221,7 @@
 
       <!-- Preorder -->
       <section class="youplay-banner youplay-banner-parallax mt-60" id="exclusive">
-        <div class="image" style="background-image: url('assets/images/game-brs-8-1920x1080.jpg');" data-speed="-0.2">
+        <div class="image" style="background-image: url({{ asset('assets/images/game-brs-8-1920x1080.jpg') }});" data-speed="-0.2">
         </div>
 
         <div class="info container align-center">
@@ -247,42 +247,42 @@
         <div class="owl-carousel" data-autoplay="6000">
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-1.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-1.png') }}" alt="">
             </a>
           </div>
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-2.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-2.png') }}" alt="">
             </a>
           </div>
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-3.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-3.png') }}" alt="">
             </a>
           </div>
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-4.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-4.png') }}" alt="">
             </a>
           </div>
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-5.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-5.png') }}" alt="">
             </a>
           </div>
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-6.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-6.png') }}" alt="">
             </a>
           </div>
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-7.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-7.png') }}" alt="">
             </a>
           </div>
           <div class="item">
             <a href="#">
-              <img src="assets/images/partner-logo-8.png" alt="">
+              <img src="{{ asset('assets/images/partner-logo-8.png') }}" alt="">
             </a>
           </div>
         </div>
@@ -301,3 +301,5 @@
       </section>
       <!-- /Get It Now -->
     </div>
+
+    @include('layouts.footer')
