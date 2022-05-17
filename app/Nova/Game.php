@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use SebastianBergman\CodeCoverage\Report\Xml\Tests;
+use GeneaLabs\NovaFileUploadField\FileUpload;
 
 class Game extends Resource
 {
@@ -49,7 +50,14 @@ class Game extends Resource
             ID::make(__('ID'), 'id')->sortable(),
             Text::make('Name')->sortable(),
             Text::make('Slug')->sortable(),
-            CkEditor::make('Description')->hideFromIndex(),   
+            CkEditor::make('Description')->hideFromIndex(),
+            FileUpload::make("Poster")
+            ->thumbnail(function ($image) {
+                return $image
+                    ? asset('storage/'.$image)
+                    : '';
+            })
+            ->prunable()   
         ];
 
     }

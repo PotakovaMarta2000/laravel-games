@@ -16,7 +16,11 @@ use \App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $games = \App\Models\Game::all();
+    $posts = \App\Models\Post::where('is_active', 1)->get();
+    return view('index', 
+    ['games'=> $games, 'posts' =>$posts]
+);
 });
 
 Route::resource('games', GameController::class)->only([

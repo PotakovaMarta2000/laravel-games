@@ -54,38 +54,15 @@
       <!-- /Features -->
 
       <!-- Screenshots -->
-      <h2 class="container h1" id="screenshots">Screenshots</h2>
-      <div class="youplay-carousel gallery-popup">
-        <a class="angled-img" href="{{ asset('assets/images/game-brs-1-1920x1179.jpg') }}">
-          <div class="img">
-            <img src="assets/images/game-brs-1-500x375.jpg" alt="">
-          </div>
-          <i class="fa fa-search-plus icon"></i>
-        </a>
-        <a class="angled-img" href="{{ asset('assets/images/game-brs-2-1920x1006.jpg') }}">
-          <div class="img">
-            <img src="assets/images/game-brs-2-500x375.jpg" alt="">
-          </div>
-          <i class="fa fa-search-plus icon"></i>
-        </a>
-        <a class="angled-img" href="{{ asset('assets/images/game-brs-3-1920x1080.jpg') }}">
-          <div class="img">
-            <img src="assets/images/game-brs-3-500x375.jpg" alt="">
-          </div>
-          <i class="fa fa-search-plus icon"></i>
-        </a>
-        <a class="angled-img" href="{{ asset('assets/images/game-brs-4-1920x1200.jpg') }}">
-          <div class="img">
-            <img src="assets/images/game-brs-4-500x375.jpg" alt="">
-          </div>
-          <i class="fa fa-search-plus icon"></i>
-        </a>
-        <a class="angled-img" href="{{ asset('assets/images/game-brs-5-1525x900.jpg') }}">
-          <div class="img">
-            <img src="{{ asset('assets/images/game-brs-5-500x375.jpg') }}" alt="" >
-          </div>
-          <i class="fa fa-search-plus icon"></i>
-        </a>
+      <h2 class="container h1" id="screenshots">Игры</h2>
+      <div class="youplay-carousel">
+        @foreach($games as $game)
+          <a class="angled-img" href="{{ route('games.show', [$game->slug]) }}">
+            <div class="img">
+              <img src="{{ asset('storage/' . $game->poster) }}" alt="{{ $game->name }}">
+            </div>
+          </a>
+        @endforeach
       </div>
       <!-- /Screenshots -->
 
@@ -159,6 +136,7 @@
       <h2 class="container h1" id="news">Recent News</h2>
       <section class="youplay-news container">
         <!-- Single News Block -->
+        @foreach($posts as $post)
         <div class="news-one">
           <div class="row vertical-gutter">
             <div class="col-md-4">
@@ -170,50 +148,20 @@
             </div>
             <div class="col-md-8">
               <div class="clearfix">
-                <h3 class="h2 pull-left m-0"><a href="blog-post.html">Meet on Apple Devices - Black Rock Shooter</a></h3>
-                <span class="date pull-right"><i class="fa fa-calendar"></i> May 14, 2016</span>
+                <h3 class="h2 pull-left m-0"><a href="{{route('posts.show', [$post->slug]) }}">{{$post->title}}</a></h3>
+                <span class="date pull-right"><i class="fa fa-calendar"></i> {{ $post->created_at }}</span>
               </div>
-              <div class="tags">
-                <i class="fa fa-tags"></i>  <a href="#">Release</a>, <a href="#">Black Rock Shooter</a>, <a href="#">iOs</a>, <a href="#">Apple</a>
-              </div>
+             
               <div class="description">
-                <p>
-                  Arcu curabitur magna lorem Luctus. Curabitur eleifend facilisi vulputate nam. Primis magna fringilla sed nunc felis cubilia suscipit adipiscing euismod eros cursus adipiscing dis vel etiam. Per id malesuada facilisi odio.
-                </p>
+               
+                {!! $post->discription !!}
+               
               </div>
-              <a href="blog-post.html" class="btn read-more pull-left">Read More</a>
+              <a href="{{route('posts.show', [$post->slug]) }}" class="btn read-more pull-left">Читать далее</a>
             </div>
           </div>
         </div>
-        <!-- /Single News Block -->
-
-        <!-- Single News Block -->
-        <div class="news-one">
-          <div class="row vertical-gutter">
-            <div class="col-md-4">
-              <a href="blog-post.html" class="angled-img">
-                <div class="img">
-                  <img src="{{ asset('assets/images/game-brs-7-500x375.jpg') }}" alt="">
-                </div>
-              </a>
-            </div>
-            <div class="col-md-8">
-              <div class="clearfix">
-                <h3 class="h2 pull-left m-0"><a href="blog-post.html">Closed Beta  Started Today - Black Rock Shooter II</a></h3>
-                <span class="date pull-right"><i class="fa fa-calendar"></i> April 24, 2016</span>
-              </div>
-              <div class="tags">
-                <i class="fa fa-tags"></i>  <a href="#">Black Rock Shooter II</a>, <a href="#">Beta</a>, <a href="#">Start Today</a>
-              </div>
-              <div class="description">
-                <p>Curabitur. Magnis sapien metus euismod a sociosqu ac phasellus non. Sociosqu, lorem. Curabitur. Adipiscing penatibus tempus habitant, porttitor cum sed.</p>
-
-                <p>Condimentum justo semper semper elementum. Nulla rhoncus ac eros aliquet praesent massa sed ante sociis vivamus. Vulputate lobortis turpis hymenaeos. Ac ipsum arcu sollicitudin lorem feugiat ullamcorper. Tempus donec iaculis.</p>
-              </div>
-              <a href="blog-post.html" class="btn read-more pull-left">Read More</a>
-            </div>
-          </div>
-        </div>
+        @endforeach
         <!-- /Single News Block -->
       </section>
       <!-- /Recent News -->
